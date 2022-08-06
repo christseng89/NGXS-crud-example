@@ -1,3 +1,6 @@
+Blog https://www.daptontechnologies.com/angular-ngxs-crud/
+Source https://github.com/daptontech/ngxs-crud-app
+
 https://github.com/ngxs/store/blob/master/docs/advanced/ivy-migration-guide.md
 
 // todo.state.ts
