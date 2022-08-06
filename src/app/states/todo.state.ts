@@ -9,7 +9,7 @@ import {
   SetSelectedTodo,
   UpdateTodo,
 } from "../actions/todo.action";
-import { TodoService } from "../todo.service";
+import { TodoService } from "../services/todo.service";
 import { tap } from "rxjs/operators";
 
 export class TodoStateModel {

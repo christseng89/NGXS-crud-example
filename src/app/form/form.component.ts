@@ -1,10 +1,12 @@
 import { Component, OnDestroy, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
-import { Select, Store } from "@ngxs/store";
 import { ActivatedRoute, Router } from "@angular/router";
+import { Observable, Subscription } from "rxjs";
+
+import { Select, Store } from "@ngxs/store";
+
 import { TodoState } from "../states/todo.state";
 import { AddTodo, SetSelectedTodo, UpdateTodo } from "../actions/todo.action";
-import { Observable, Subscription } from "rxjs";
 import { Todo } from "../models/Todo";
 
 @Component({
