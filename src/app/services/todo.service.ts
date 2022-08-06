@@ -10,7 +10,6 @@ export class TodoService {
   constructor(private http: HttpClient) {}
 
   fetchTodos() {
-    console.log("API_URL :", environment.API_URL);
     return this.http.get<Todo[]>(`${environment.API_URL}`);
   }
 

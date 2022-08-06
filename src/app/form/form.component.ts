@@ -47,7 +47,9 @@ export class FormComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.formSubscription.unsubscribe();
+    if (this.formSubscription) {
+      this.formSubscription.unsubscribe();
+    }
   }
 
   createForm() {
@@ -69,11 +71,12 @@ export class FormComponent implements OnInit, OnDestroy {
       );
     } else {
       this.formSubscription.add(
-        (this.formSubscription = this.store
+        this.store
+          // Carridge return
           .dispatch(new AddTodo(this.todoForm.value))
           .subscribe(() => {
             this.clearForm();
-          }))
+          })
       );
     }
   }

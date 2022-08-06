@@ -23,7 +23,7 @@ const todos = [
   { id: 5004, title: "Interview Teresa", userId: "123", completed: false },
 ];
 
-app.get(`${urlPath}/:id`, (req, res) => {
+app.get(`${urlPath}/:id`, async (req, res) => {
   const idx = todos.findIndex((i) => i.id.toString() === req.params.id);
   if (idx > -1) {
     res.send(todos[idx]);
@@ -32,7 +32,7 @@ app.get(`${urlPath}/:id`, (req, res) => {
   }
 });
 
-app.get(urlPath, (_req, res) => {
+app.get(urlPath, async (_req, res) => {
   res.send(todos);
 });
 
@@ -48,7 +48,7 @@ app.post(urlPath, async (req, res) => {
   }
 });
 
-app.put(`${urlPath}/:id`, (req, res) => {
+app.put(`${urlPath}/:id`, async (req, res) => {
   const idx = todos.findIndex((i) => i.id.toString() === req.params.id);
   if (idx > -1) {
     const { userId, title } = req.body;
@@ -63,7 +63,7 @@ app.put(`${urlPath}/:id`, (req, res) => {
   }
 });
 
-app.delete(`${urlPath}/:id`, (req, res) => {
+app.delete(`${urlPath}/:id`, async (req, res) => {
   const idx = todos.findIndex((i) => i.id.toString() === req.params.id);
   if (idx > -1) {
     todos.splice(idx, 1);
