@@ -1,3 +1,5 @@
+import { Injectable } from '@angular/core';
+
 import {State, Action, StateContext, Selector} from '@ngxs/store';
 import {Todo} from '../models/Todo';
 import {AddTodo, DeleteTodo, GetTodos, SetSelectedTodo, UpdateTodo} from '../actions/todo.action';
@@ -16,6 +18,8 @@ export class TodoStateModel {
         selectedTodo: null
     }
 })
+
+@Injectable()
 export class TodoState {
 
     constructor(private todoService: TodoService) {

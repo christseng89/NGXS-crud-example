@@ -1,0 +1,10 @@
+https://github.com/ngxs/store/blob/master/docs/advanced/ivy-migration-guide.md
+
+// todo.state.ts
+import { Injectable } from '@angular/core'; // import Injectable ***
+
+import {State, Action, StateContext, Selector} from '@ngxs/store';
+...
+@Injectable() // injectable ***
+export class TodoState {
+...  
