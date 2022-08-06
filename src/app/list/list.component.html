@@ -5,6 +5,7 @@
         <tr>
           <th>Id</th>
           <th>Title</th>
+          <th>User</th>
           <th>Edit</th>
           <th>Delete</th>
         </tr>
@@ -13,6 +14,7 @@
         <tr *ngFor="let todo of todos | async">
           <td>{{ todo.id }}</td>
           <td>{{ todo.title }}</td>
+          <td>{{ todo.userId }}</td>
           <td>
             <button class="btn btn-primary btn-sm" (click)="editTodo(todo)">
               <i class="bi bi-pencil-fill"></i>
