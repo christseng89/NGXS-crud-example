@@ -46,10 +46,10 @@
       <div class="form-group">
         <button
           type="submit"
-          class="btn btn-primary mr-1 btn-sm"
+          class="btn btn-primary mr-2 btn-sm"
           [disabled]="todoForm.pristine || todoForm.invalid"
         >
-          Submit
+          {{ editTodo ? "Update" : "Add" }}
         </button>
         <button class="btn btn-danger btn-sm" (click)="clearForm()">
           Clear
