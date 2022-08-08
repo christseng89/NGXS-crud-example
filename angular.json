@@ -123,7 +123,6 @@
       }
     }
   },
-  "defaultProject": "ngxs-crud-app",
   "cli": {
     "analytics": "f2e22407-8df5-42c4-a71d-c730bd8d4ee6"
   }
